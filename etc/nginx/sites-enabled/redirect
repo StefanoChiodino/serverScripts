@@ -1,0 +1,13 @@
+# Redirect anything else to https://stefano.chiodino.uk
+server {
+        listen 80;
+        listen [::]:80;
+        listen 443;
+        listen [::]:443;
+
+        server_name chiodino.uk www.chiodino.uk;
+	
+	include /etc/nginx/ssl.conf;
+
+        return 301 https://stefano.chiodino.uk$request_uri;
+}

@@ -1,0 +1,5 @@
+description "Webhook https://github.com/adnanh/webhook"
+
+start on filesystem
+
+exec /home/draga/webhook/webhook -hooks /home/draga/webhook/hooks.json -secure -cert /etc/letsencrypt/live/chiodino.uk/fullchain.pem -key /etc/letsencrypt/live/chiodino.uk/privkey.pem

@@ -1,0 +1,1 @@
+tmpfs /tmp/chiodino.uk/pagespeed tmpfs defaults,noatime,nosuid,nodev,noexec,mode=1777,size=50M 0 0

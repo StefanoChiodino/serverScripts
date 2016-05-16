@@ -1,0 +1,8 @@
+# Provide very basic nginx stats.
+server {
+	listen 127.0.0.1:81;
+
+	location /status {
+		stub_status;
+	}
+}
