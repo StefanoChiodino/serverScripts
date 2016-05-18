@@ -17,7 +17,8 @@ trap "echo 'A problem occurred.  Reverting to backup.'; rsync -aq --del $BACKUP_
 
 # fetch repo to make sure it's up to date if working with remote webhook.
 cd $GIT_REPO
-git pull
+git fetch
+git checkout origin/master
 # Build the website. GO HUGO!
 /usr/bin/hugo -s $GIT_REPO -d $WORKING_DIRECTORY
 # Copy the output of Hugo to the directory where the website is hosted.
