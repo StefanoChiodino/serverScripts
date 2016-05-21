@@ -25,6 +25,7 @@ git checkout origin/master
 # Use -c to copy only files that have changed to avoid messing with webhost caches.
 # Use -z if moving across network to save bandwidth.
 rsync -aqc $WORKING_DIRECTORY/ $PUBLIC_WWW
+# Ask Google webmaster tools to parse your sitemap.
 curl https://google.com/webmasters/sitemaps/ping?sitemap=https://stefano.chiodino.uk/sitemap.xml
 # Disable trap.
 trap - EXIT
