@@ -27,6 +27,7 @@ git checkout origin/master
 rsync -aqc $WORKING_DIRECTORY/ $PUBLIC_WWW
 # Ask Google webmaster tools to parse your sitemap.
 curl https://google.com/webmasters/sitemaps/ping?sitemap=https://stefano.chiodino.uk/sitemap.xml
+curl https://www.bing.com/ping?sitemap=https%3A%2F%2Fstefano.chiodino.uk/sitemap.xml
 # Disable trap.
 trap - EXIT
 
